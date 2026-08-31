@@ -40,8 +40,35 @@ export default function Business() {
           <h3>Phase 1: Discovery &amp; Evaluation</h3>
           <p>
             I come in and audit your business — anywhere from a single department to the whole
-            company — for where software can move the needle.
+            company — for where software can move the needle. That audit runs through three
+            steps:
           </p>
+
+          <div className="resume-entry">
+            <h4>Initial Meeting</h4>
+            <p>
+              A conversation with leadership to understand your goals for the audit, agree on
+              scope — a single department or the whole business — and set expectations for the
+              engagement.
+            </p>
+          </div>
+
+          <div className="resume-entry">
+            <h4>Department Head Meetings</h4>
+            <p>
+              One-on-one conversations with each department head to map out current workflows,
+              tools in use, and where they see the biggest friction or opportunity.
+            </p>
+          </div>
+
+          <div className="resume-entry">
+            <h4>Team Meetings</h4>
+            <p>
+              Time with the people actually doing the day-to-day work, to see how those tools
+              and processes hold up in practice and confirm what department heads reported.
+            </p>
+          </div>
+
           <ul>
             <li>Fixed, low price based on company size.</li>
             <li>
