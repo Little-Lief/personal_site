@@ -1,5 +1,6 @@
 import Head from "next/head";
 import SlideSection from "../components/SlideSection";
+import { BASE_PATH } from "../lib/basePath";
 
 export default function Home() {
   return (
@@ -15,7 +16,7 @@ export default function Home() {
       <SlideSection direction="left">
         <h1>Zachary Greenlief</h1>
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src="/images/headshot.jpg" alt="Zachary Greenlief" className="headshot" />
+        <img src={`${BASE_PATH}/images/headshot.jpg`} alt="Zachary Greenlief" className="headshot" />
         <p>
           I&apos;m a software developer based in the Pittsburgh area, and the founder of{" "}
           <strong>Little Lief LLC</strong>. My path here wasn&apos;t a straight line from a
@@ -48,11 +49,11 @@ export default function Home() {
         <figure className="photo-figure">
           <div className="photo-row">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/images/poker-3.jpg" alt="Zachary Greenlief in front of the WSOP sign in Las Vegas" className="photo-row-item" />
+            <img src={`${BASE_PATH}/images/poker-3.jpg`} alt="Zachary Greenlief in front of the WSOP sign in Las Vegas" className="photo-row-item" />
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/images/poker-2.jpg" alt="Zachary Greenlief holding his chip-count redraw slip at the WSOP Big 50" className="photo-row-item" />
+            <img src={`${BASE_PATH}/images/poker-2.jpg`} alt="Zachary Greenlief holding his chip-count redraw slip at the WSOP Big 50" className="photo-row-item" />
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/images/poker-1.jpg" alt="Poker chips on the table during the WSOP Big 50" className="photo-row-item" />
+            <img src={`${BASE_PATH}/images/poker-1.jpg`} alt="Poker chips on the table during the WSOP Big 50" className="photo-row-item" />
           </div>
           <figcaption className="photo-caption">From the 2019 WSOP Big 50 trip.</figcaption>
         </figure>
@@ -62,14 +63,14 @@ export default function Home() {
         <h2>Family</h2>
         <figure className="photo-figure">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/images/family.jpg" alt="Zachary Greenlief with his family" className="family-photo" />
+          <img src={`${BASE_PATH}/images/family.jpg`} alt="Zachary Greenlief with his family" className="family-photo" />
           <figcaption className="photo-caption">
             My wife, Kacie, and our kids, Winona and Zachary Levi.
           </figcaption>
         </figure>
         <figure className="photo-figure">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/images/jake.jpg" alt="Jake the dog with one of the kids" className="family-photo" />
+          <img src={`${BASE_PATH}/images/jake.jpg`} alt="Jake the dog with one of the kids" className="family-photo" />
           <figcaption className="photo-caption">And Jake, our dog.</figcaption>
         </figure>
       </SlideSection>

@@ -1,5 +1,6 @@
 import Head from "next/head";
 import SlideSection from "../components/SlideSection";
+import { BASE_PATH } from "../lib/basePath";
 
 export default function Business() {
   return (
@@ -102,7 +103,7 @@ export default function Business() {
         </p>
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src="/images/irrigation-hardware.jpg"
+          src={`${BASE_PATH}/images/irrigation-hardware.jpg`}
           alt="Little Lief AI hardware components — control boards, valves, and enclosures in development"
           className="product-photo"
         />
