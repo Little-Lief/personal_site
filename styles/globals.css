@@ -21,6 +21,11 @@ body {
   color: var(--ink);
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   line-height: 1.6;
+  /* the 100vw full-bleed trick below (used for the mobile h1 underline)
+     intentionally ignores scrollbar-reserved width, which can add a sliver
+     of horizontal overflow on pages with a scrollbar — clip it here rather
+     than let it show as a stray horizontal scrollbar. */
+  overflow-x: hidden;
 }
 
 a {
@@ -99,11 +104,23 @@ h1 {
 }
 
 @media (max-width: 560px) {
-  /* main's side padding stops the h1 underline short of the screen edges
-     on narrow viewports — bleed it back out to the full width there. */
+  /* main's side padding stops the h1 underline short of the screen edges on
+     narrow viewports. Canceling main's padding alone isn't enough: main's
+     own width is the document's clientWidth, which a classic (space-taking)
+     scrollbar shrinks — so on pages tall enough to scroll, the underline
+     would only reach main's edge, not the true screen edge, while short
+     pages with no scrollbar would reach it fine. 100vw is defined to
+     include any scrollbar-reserved width, so anchoring to it instead bleeds
+     to the real edge consistently on every page. */
   h1 {
+    /* Pin the left edge to the true viewport edge with a fixed (not
+       percentage) offset, so it's unaffected by any scrollbar-narrowed
+       containing-block width, then size to 100vw so the right edge lands
+       on the true viewport edge too — a %-based margin-right here would
+       reintroduce the same scrollbar-width mismatch this rule exists to
+       avoid, so width alone determines the right edge. */
     margin-left: -1.5rem;
-    margin-right: -1.5rem;
+    width: 100vw;
     padding-left: 1.5rem;
     padding-right: 1.5rem;
   }
