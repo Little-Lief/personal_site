@@ -311,6 +311,42 @@ h2 {
   resize: vertical;
 }
 
+.contact-form .optional-tag {
+  font-weight: 400;
+  color: var(--ink);
+  opacity: 0.65;
+  font-size: 0.85rem;
+}
+
+.contact-form fieldset {
+  border: 1px solid var(--mint);
+  border-radius: 6px;
+  padding: 0.8rem 0.9rem;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.contact-form legend {
+  font-weight: 600;
+  color: var(--mint);
+  padding: 0 0.3rem;
+}
+
+.contact-form .checkbox-option {
+  flex-direction: row;
+  align-items: center;
+  gap: 0.55rem;
+  font-weight: 400;
+  color: var(--ink);
+}
+
+.contact-form .checkbox-option input[type="checkbox"] {
+  width: auto;
+  accent-color: var(--forest);
+}
+
 .contact-form button {
   align-self: flex-start;
   background: var(--forest);

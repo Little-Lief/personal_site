@@ -53,6 +53,43 @@ export default function ContactForm() {
         <input type="email" name="email" required />
       </label>
       <label>
+        Business name <span className="optional-tag">(optional)</span>
+        <input type="text" name="business_name" />
+      </label>
+
+      <fieldset>
+        <legend>
+          What are you interested in? <span className="optional-tag">(optional)</span>
+        </legend>
+        <label className="checkbox-option">
+          <input type="checkbox" name="interest_website" value="Yes" />
+          A website
+        </label>
+        <label className="checkbox-option">
+          <input type="checkbox" name="interest_software" value="Yes" />
+          Custom software or an app
+        </label>
+        <label className="checkbox-option">
+          <input type="checkbox" name="interest_audit" value="Yes" />
+          A business audit — where could software help?
+        </label>
+        <label className="checkbox-option">
+          <input type="checkbox" name="interest_unsure" value="Yes" />
+          Not sure yet — let&apos;s talk
+        </label>
+      </fieldset>
+
+      <label>
+        Tell me about your business{" "}
+        <span className="optional-tag">(optional, but it helps)</span>
+        <textarea
+          name="business_details"
+          rows={3}
+          placeholder="What does the business do, and what's prompting you to look into this now?"
+        />
+      </label>
+
+      <label>
         Message
         <textarea name="message" rows={6} required />
       </label>
