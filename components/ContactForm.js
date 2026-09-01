@@ -80,16 +80,6 @@ export default function ContactForm() {
       </fieldset>
 
       <label>
-        Tell me about your business{" "}
-        <span className="optional-tag">(optional, but it helps)</span>
-        <textarea
-          name="business_details"
-          rows={3}
-          placeholder="What does the business do, and what's prompting you to look into this now?"
-        />
-      </label>
-
-      <label>
         Message
         <textarea name="message" rows={6} required />
       </label>

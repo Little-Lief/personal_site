@@ -10,11 +10,7 @@ export default function Contact() {
       </Head>
       <SlideSection direction="left">
         <h1>Get in touch</h1>
-        <p>
-          Reach me directly at{" "}
-          <a href="mailto:zachary.greenlief@littleliefai.com">zachary.greenlief@littleliefai.com</a>
-          , or send a message below.
-        </p>
+        <p>Send a message below and I&apos;ll get back to you soon.</p>
         <ContactForm />
       </SlideSection>
     </>
