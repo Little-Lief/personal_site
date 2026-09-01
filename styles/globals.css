@@ -98,6 +98,17 @@ h1 {
   padding-bottom: 0.4rem;
 }
 
+@media (max-width: 560px) {
+  /* main's side padding stops the h1 underline short of the screen edges
+     on narrow viewports — bleed it back out to the full width there. */
+  h1 {
+    margin-left: -1.5rem;
+    margin-right: -1.5rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
 h2 {
   border-left: 5px solid var(--mint);
   padding-left: 0.6rem;
