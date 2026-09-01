@@ -168,7 +168,7 @@ h2 {
   width: 160px;
   height: 160px;
   object-fit: cover;
-  object-position: 50% 18%; /* keeps the top of the head in frame instead of centering on the chest */
+  object-position: 50% 5%; /* keeps the whole head — hair included — in frame instead of centering on the chest */
   float: right;
   margin: 0 0 1rem 1.5rem;
 }
